@@ -11,7 +11,12 @@ class MyApp extends StatelessWidget {
           title: new Text('nba'),
           backgroundColor: new Color.fromARGB(125, 245, 67, 89),
         ),
-        body: new Center(child: new Text('zzy')),
+        body: new Center(
+          child: new Text(
+            'igsnow',
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
     );
   }
