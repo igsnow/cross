@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -6,15 +7,45 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final PageController _controller = PageController(
-    initialPage: 0,
-  );
+  final _title = 'VCANBUY';
+  List _imageUrls = [
+    "https://res.vcanbuy.com/misc/f361abfe833db5182d00e300dcb66d4d.png",
+    "https://res.vcanbuy.com/misc/5d26a43aa209727a3df7cfdc3e51af76.png",
+    "https://res.vcanbuy.com/misc/f3000f9bfba6380a0d5a81bf16e7c529.jpg",
+    "https://res.vcanbuy.com/misc/23577d6f32f0452c30187b81a373a96a.png",
+    "https://res.vcanbuy.com/misc/a8148c6ae18b462e435b59fc6304ecc6.png",
+    "https://res.vcanbuy.com/misc/026186167669110016a8686a69b1de7d.jpg"
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: Center(
+            child: Text(
+              _title,
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        ),
         body: Center(
-      child: Text('首页'),
-    ));
+            child: Column(
+          children: <Widget>[
+            Container(
+              height: 160,
+              child: Swiper(
+                itemCount: _imageUrls.length,
+                autoplay: true,
+                itemBuilder: (BuildContext content, int index) {
+                  return Image.network(
+                    _imageUrls[index],
+                    fit: BoxFit.fill,
+                  );
+                },
+                pagination: SwiperPagination(),
+              ),
+            )
+          ],
+        )));
   }
 }

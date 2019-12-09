@@ -6,10 +6,6 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
-  final PageController _controller = PageController(
-    initialPage: 0,
-  );
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
