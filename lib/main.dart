@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage>
           ),
           new Tab(
             text: '购物车',
-            icon: new Icon(Icons.card_giftcard),
+            icon: new Icon(Icons.add_shopping_cart),
           ),
           new Tab(
             text: '我的',

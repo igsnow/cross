@@ -1,3 +1,4 @@
+import 'package:cross/components/category.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
@@ -21,30 +22,39 @@ class FirstPage extends StatefulWidget {
 class FirstPageState extends State<FirstPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: Center(
-          child: Text(widget.title),
+        appBar: new AppBar(
+          title: Center(
+            child: Text(
+              widget.title,
+              style: new TextStyle(color: Colors.white),
+            ),
+          ),
         ),
-      ),
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: 170.0,
-        child: new Swiper(
-          itemBuilder: (BuildContext context, int index) {
-            return new Image.network(
-              widget.imgs[index],
-              fit: BoxFit.fill,
-            );
-          },
-          itemCount: 6,
+        body: new Column(
+          children: <Widget>[
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 160.0,
+              child: new Swiper(
+                itemBuilder: (BuildContext context, int index) {
+                  return new Image.network(
+                    widget.imgs[index],
+                    fit: BoxFit.fill,
+                  );
+                },
+                itemCount: 6,
 //          itemWidth: 350.0,
 //          itemHeight: 150.0,
-          pagination: new SwiperPagination(),
-          control: new SwiperControl(),
+                pagination: new SwiperPagination(),
+                control: new SwiperControl(),
 //          layout: SwiperLayout.STACK,
-          autoplay: true,
-        ),
-      ),
-    );
+                autoplay: true,
+              ),
+            ),
+            Container(
+              child: new CategoryList(),
+            )
+          ],
+        ));
   }
 }
