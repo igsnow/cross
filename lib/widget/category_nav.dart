@@ -4,17 +4,18 @@ import 'package:flutter/material.dart';
 class CategoryNav extends StatelessWidget {
   final List<CategoryModel> categoryNavList;
 
-  const CategoryNav({Key key, @required this.categoryNavList}) : super(key: key);
+  const CategoryNav({Key key, @required this.categoryNavList})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 64,
+//      height: 150,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(6))),
       child: Padding(
-        padding: EdgeInsets.all(7),
+        padding: EdgeInsets.all(5),
         child: _items(context),
       ),
     );
@@ -26,23 +27,40 @@ class CategoryNav extends StatelessWidget {
     categoryNavList.forEach((model) {
       items.add(_item(context, model));
     });
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: items,
+    // 计算出第一个行显示的数量
+    int separate = (categoryNavList.length / 2 + 0.5).toInt();
+    print(separate);
+    return Column(
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: items.sublist(0, separate),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: items.sublist(separate, categoryNavList.length),
+          ),
+        )
+      ],
     );
   }
 
   Widget _item(BuildContext context, CategoryModel model) {
-    return GestureDetector(
-      onTap: () {},
-      child: Column(
-        children: <Widget>[
-          Image.asset(model.icon, width: 32, height: 32),
-          Text(
-            model.title,
-            style: TextStyle(fontSize: 12),
-          )
-        ],
+    return Expanded(
+      flex: 1,
+      child: GestureDetector(
+        onTap: () {},
+        child: Column(
+          children: <Widget>[
+            Image.asset(model.icon, width: 32, height: 32),
+            Text(
+              model.title,
+              style: TextStyle(fontSize: 13),
+            )
+          ],
+        ),
       ),
     );
   }
