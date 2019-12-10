@@ -1,8 +1,8 @@
-import 'package:cross/model/common_model.dart';
+import 'package:cross/model/category_model.dart';
 import 'package:flutter/material.dart';
 
 class LocalNav extends StatelessWidget {
-  final List<CommonModel> localNavList;
+  final List<CategoryModel> localNavList;
 
   const LocalNav({Key key, @required this.localNavList}) : super(key: key);
 
@@ -32,7 +32,7 @@ class LocalNav extends StatelessWidget {
     );
   }
 
-  Widget _item(BuildContext context, CommonModel model) {
+  Widget _item(BuildContext context, CategoryModel model) {
     return GestureDetector(
       onTap: () {},
       child: Column(

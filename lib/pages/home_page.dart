@@ -1,6 +1,5 @@
-import 'package:cross/dao/home_dao.dart';
-import 'package:cross/model/common_model.dart';
-import 'package:cross/model/home_model.dart';
+import 'package:cross/dao/category_dao.dart';
+import 'package:cross/model/category_model.dart';
 import 'package:cross/widget/local_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
@@ -20,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     "https://res.vcanbuy.com/misc/a8148c6ae18b462e435b59fc6304ecc6.png",
     "https://res.vcanbuy.com/misc/026186167669110016a8686a69b1de7d.jpg"
   ];
-  List<CommonModel> localNavList = [];
+  List<CategoryModel> localNavList = [];
 
   @override
   void initState() {
@@ -30,9 +29,9 @@ class _HomePageState extends State<HomePage> {
 
   Future<Null> _handleRefresh() async {
     try {
-      HomeModel model = await HomeDao.fetch();
+      CategoryList categoryList = await CategoryDao.fetch();
       setState(() {
-        localNavList = model.localNavList;
+        localNavList = categoryList.categoryList;
       });
     } catch (e) {
       print(e);

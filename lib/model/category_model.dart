@@ -1,27 +1,23 @@
-/**
- * @首页类目的实体
- * @icon
- * @title
- */
-class Category {
+/// 类目实体
+class CategoryModel {
   String icon;
   String title;
 
-  Category({this.icon, this.title});
+  CategoryModel({this.icon, this.title});
 
-  factory Category.fromJson(Map<String, dynamic> json) {
-    return Category(icon: json['icon'], title: json['title']);
+  factory CategoryModel.fromJson(Map<String, dynamic> json) {
+    return CategoryModel(icon: json['icon'], title: json['title']);
   }
 }
 
 class CategoryList {
-  List<Category> categoryList;
+  List<CategoryModel> categoryList;
 
   CategoryList({this.categoryList});
 
   factory CategoryList.fromJson(List<dynamic> listJson) {
-    List<Category> categoryList =
-        listJson.map((value) => Category.fromJson(value)).toList();
+    List<CategoryModel> categoryList =
+        listJson.map((i) => CategoryModel.fromJson(i)).toList();
     return CategoryList(categoryList: categoryList);
   }
 }
