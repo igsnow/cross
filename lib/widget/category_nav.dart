@@ -29,7 +29,6 @@ class CategoryNav extends StatelessWidget {
     });
     // 计算出第一个行显示的数量
     int separate = (categoryNavList.length / 2 + 0.5).toInt();
-    print(separate);
     return Column(
       children: <Widget>[
         Row(
