@@ -1,10 +1,10 @@
 import 'package:cross/model/category_model.dart';
 import 'package:flutter/material.dart';
 
-class LocalNav extends StatelessWidget {
-  final List<CategoryModel> localNavList;
+class CategoryNav extends StatelessWidget {
+  final List<CategoryModel> categoryNavList;
 
-  const LocalNav({Key key, @required this.localNavList}) : super(key: key);
+  const CategoryNav({Key key, @required this.categoryNavList}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,9 @@ class LocalNav extends StatelessWidget {
   }
 
   _items(BuildContext context) {
-    if (localNavList == null) return null;
+    if (categoryNavList == null) return null;
     List<Widget> items = [];
-    localNavList.forEach((model) {
+    categoryNavList.forEach((model) {
       items.add(_item(context, model));
     });
     return Row(
