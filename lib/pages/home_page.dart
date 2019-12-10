@@ -1,6 +1,7 @@
 import 'package:cross/dao/category_dao.dart';
 import 'package:cross/model/category_model.dart';
 import 'package:cross/widget/category_nav.dart';
+import 'package:cross/widget/floor_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
@@ -50,8 +51,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-        body: Center(
-            child: Column(
+        body: ListView(
           children: <Widget>[
             Container(
               height: 160,
@@ -72,8 +72,12 @@ class _HomePageState extends State<HomePage> {
               child: CategoryNav(
                 categoryNavList: categoryNavList,
               ),
-            )
+            ),
+            Padding(
+              padding: EdgeInsets.all(2),
+              child: FloorList(),
+            ),
           ],
-        )));
+        ));
   }
 }
