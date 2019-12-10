@@ -6,9 +6,10 @@ import 'package:cross/model/category_model.dart';
 class CategoryDao {
   static Future<CategoryList> fetch() async {
     List<dynamic> list = [
-      {"icon": '', "title": "Jack"},
-      {"icon": '', "title": "Rose"},
-      {"icon": '', "title": "Karl"}
+      {"icon": 'images/female.png', "title": "女装"},
+      {"icon": 'images/male.png', "title": "男装"},
+      {"icon": 'images/shoes.png', "title": "服饰配件"},
+      {"icon": 'images/home.png', "title": "居家"},
     ];
 
     CategoryList categoryList = CategoryList.fromJson(list);

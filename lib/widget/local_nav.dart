@@ -37,7 +37,7 @@ class LocalNav extends StatelessWidget {
       onTap: () {},
       child: Column(
         children: <Widget>[
-          Image.network(model.icon, width: 32, height: 32),
+          Image.asset(model.icon, width: 32, height: 32),
           Text(
             model.title,
             style: TextStyle(fontSize: 12),
