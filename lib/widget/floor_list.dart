@@ -45,49 +45,52 @@ class FloorList extends StatelessWidget {
                       ],
                     ),
                   )),
-              Padding(
-                  padding: EdgeInsets.all(2),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Image.network(
-                            "https://cdn.v2ex.com/avatar/d247/b1ac/145384_normal.png?m=1476168993",
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
-                          ),
-                          Text('冬季新款男装'),
-                          Text('99.99')
-                        ],
-                      ),
-                      Column(
-                        children: <Widget>[
-                          Image.network(
-                            "https://cdn.v2ex.com/avatar/d247/b1ac/145384_normal.png?m=1476168993",
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
-                          ),
-                          Text('冬季新款男装'),
-                          Text('99.99')
-                        ],
-                      ),
-                      Column(
-                        children: <Widget>[
-                          Image.network(
-                            "https://cdn.v2ex.com/avatar/d247/b1ac/145384_normal.png?m=1476168993",
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
-                          ),
-                          Text('冬季新款男装'),
-                          Text('99.99')
-                        ],
-                      ),
-                    ],
-                  ))
+              Container(
+                margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                child: Padding(
+                    padding: EdgeInsets.all(0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Column(
+                          children: <Widget>[
+                            Image.network(
+                              "https://cdn.v2ex.com/avatar/d247/b1ac/145384_normal.png?m=1476168993",
+                              width: 108,
+                              height: 108,
+                              fit: BoxFit.cover,
+                            ),
+                            Text('冬季新款女装'),
+                            Text('99.99')
+                          ],
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Image.network(
+                              "https://cdn.v2ex.com/avatar/d247/b1ac/145384_normal.png?m=1476168993",
+                              width: 108,
+                              height: 108,
+                              fit: BoxFit.cover,
+                            ),
+                            Text('冬季新款男装'),
+                            Text('99.99')
+                          ],
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Image.network(
+                              "https://cdn.v2ex.com/avatar/d247/b1ac/145384_normal.png?m=1476168993",
+                              width: 108,
+                              height: 108,
+                              fit: BoxFit.cover,
+                            ),
+                            Text('冬季新款男装'),
+                            Text('99.99')
+                          ],
+                        ),
+                      ],
+                    )),
+              ),
             ],
           );
         },
