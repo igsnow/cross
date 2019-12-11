@@ -4,12 +4,9 @@ class FloorList extends StatelessWidget {
   final List data = new List();
 
   FloorList() {
-    for (int i = 1; i < 10; i++) {
+    for (int i = 0; i < 8; i++) {
       data.add({
-        "title": "我是标题$i",
-        "subTitle": "我是副标题$i",
-        "imgUrl":
-            "https://cdn.v2ex.com/avatar/ed66/d1b9/439497_normal.png?m=1567609342"
+        "title": "เสื้อผ้าผู้หญิง",
       });
     }
   }
@@ -25,13 +22,29 @@ class FloorList extends StatelessWidget {
           return Column(
             children: <Widget>[
               Container(
-                child: ListTile(
-//                  leading: Image.network(_data['imgUrl']),
-                  title: Text(_data['title']),
-//                  subtitle: Text(_data['subTitle']),
-                  trailing: Icon(Icons.chevron_right),
-                ),
-              ),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("images/${index + 1}.png"),
+                        fit: BoxFit.cover),
+                  ),
+                  height: 40,
+                  margin: EdgeInsets.fromLTRB(6, 0, 6, 0),
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(12, 0, 12, 0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          '${_data['title']}',
+                          style: TextStyle(fontSize: 13, color: Colors.white),
+                        ),
+                        Text(
+                          'ดูเพิ่มเติม>',
+                          style: TextStyle(fontSize: 13, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  )),
               Padding(
                   padding: EdgeInsets.all(2),
                   child: Row(

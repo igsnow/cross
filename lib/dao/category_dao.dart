@@ -17,8 +17,8 @@ class CategoryDao {
     ];
 
     CategoryList categoryList = CategoryList.fromJson(list);
-    categoryList.categoryList
-        .forEach((item) => print('title is ${item.title}'));
+//    categoryList.categoryList
+//        .forEach((item) => print('title is ${item.title}'));
     return categoryList;
   }
 }
