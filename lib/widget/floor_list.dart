@@ -95,7 +95,7 @@ class FloorList extends StatelessWidget {
           );
         },
         separatorBuilder: (context, index) => Divider(
-              color: Colors.grey[200],
+              color: Colors.grey[300],
             ),
         itemCount: this.data.length);
   }
