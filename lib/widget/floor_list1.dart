@@ -9,7 +9,7 @@ class FloorList extends StatelessWidget {
         "title": "我是标题$i",
         "subTitle": "我是副标题$i",
         "imgUrl":
-            "https://cdn.v2ex.com/avatar/ed66/d1b9/439497_normal.png?m=1567609342"
+        "https://cdn.v2ex.com/avatar/ed66/d1b9/439497_normal.png?m=1567609342"
       });
     }
   }
@@ -30,8 +30,8 @@ class FloorList extends StatelessWidget {
           );
         },
         separatorBuilder: (context, index) => Divider(
-              color: Colors.grey,
-            ),
+          color: Colors.grey,
+        ),
         itemCount: this.data.length);
   }
 }
