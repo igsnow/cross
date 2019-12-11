@@ -22,11 +22,60 @@ class FloorList extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           var _data = this.data[index];
-          return ListTile(
-            leading: Image.network(_data['imgUrl']),
-            title: Text(_data['title']),
-            subtitle: Text(_data['subTitle']),
-            trailing: Icon(Icons.chevron_right),
+          return Column(
+            children: <Widget>[
+              Container(
+                child: ListTile(
+//                  leading: Image.network(_data['imgUrl']),
+                  title: Text(_data['title']),
+//                  subtitle: Text(_data['subTitle']),
+                  trailing: Icon(Icons.chevron_right),
+                ),
+              ),
+              Padding(
+                  padding: EdgeInsets.all(2),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          Image.network(
+                            "https://cdn.v2ex.com/avatar/d247/b1ac/145384_normal.png?m=1476168993",
+                            width: 100,
+                            height: 100,
+                            fit: BoxFit.cover,
+                          ),
+                          Text('冬季新款男装'),
+                          Text('99.99')
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Image.network(
+                            "https://cdn.v2ex.com/avatar/d247/b1ac/145384_normal.png?m=1476168993",
+                            width: 100,
+                            height: 100,
+                            fit: BoxFit.cover,
+                          ),
+                          Text('冬季新款男装'),
+                          Text('99.99')
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Image.network(
+                            "https://cdn.v2ex.com/avatar/d247/b1ac/145384_normal.png?m=1476168993",
+                            width: 100,
+                            height: 100,
+                            fit: BoxFit.cover,
+                          ),
+                          Text('冬季新款男装'),
+                          Text('99.99')
+                        ],
+                      ),
+                    ],
+                  ))
+            ],
           );
         },
         separatorBuilder: (context, index) => Divider(
