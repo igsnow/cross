@@ -68,20 +68,11 @@ class _HomePageState extends State<HomePage> {
                 pagination: SwiperPagination(),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(7, 4, 7, 4),
-              child: CategoryNav(
-                categoryNavList: categoryNavList,
-              ),
+            CategoryNav(
+              categoryNavList: categoryNavList,
             ),
-            Padding(
-              padding: EdgeInsets.all(2),
-              child: FloorList(),
-            ),
-            Padding(
-              padding: EdgeInsets.all(2),
-              child: Recommend(),
-            )
+            FloorList(),
+            Recommend()
           ],
         ));
   }

@@ -23,7 +23,7 @@ class FloorList extends StatelessWidget {
         itemBuilder: (context, index) {
           var _data = this.data[index];
           return Container(
-            margin: EdgeInsets.fromLTRB(8, 0, 8, 0),
+            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(2)),
