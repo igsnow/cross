@@ -14,7 +14,7 @@ class FloorList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     /// 楼层每张图片的宽度
-    final imgWidth = (MediaQuery.of(context).size.width - 50) / 3;
+    final double imgWidth = (MediaQuery.of(context).size.width - 50) / 3;
 
     return ListView.separated(
         shrinkWrap: true,
@@ -66,8 +66,31 @@ class FloorList extends StatelessWidget {
                             height: imgWidth,
                             fit: BoxFit.cover,
                           ),
-                          Text('冬季新款女装'),
-                          Text('99.99')
+                          Container(
+                            width: imgWidth,
+                            child: Text(
+                              '春秋季新款男装复古纯色男式衬衫休闲款',
+                              textAlign: TextAlign.left, // 该属性得设置宽度下才会生效
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 1,
+                              style: TextStyle(
+                                fontSize: 13,
+                                height: 1.6,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: imgWidth,
+                            child: Text(
+                              '¥ 39.99',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.red,
+                                fontSize: 12,
+                                height: 1.7,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       Column(
@@ -78,8 +101,31 @@ class FloorList extends StatelessWidget {
                             height: imgWidth,
                             fit: BoxFit.cover,
                           ),
-                          Text('冬季新款男装'),
-                          Text('99.99')
+                          Container(
+                            width: imgWidth,
+                            child: Text(
+                              '春秋季新款男装复古纯色男式衬衫休闲款',
+                              textAlign: TextAlign.left, // 该属性得设置宽度下才会生效
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 1,
+                              style: TextStyle(
+                                fontSize: 13,
+                                height: 1.6,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: imgWidth,
+                            child: Text(
+                              '¥ 39.99',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.red,
+                                fontSize: 12,
+                                height: 1.7,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       Column(
@@ -90,8 +136,31 @@ class FloorList extends StatelessWidget {
                             height: imgWidth,
                             fit: BoxFit.cover,
                           ),
-                          Text('冬季新款男装'),
-                          Text('99.99')
+                          Container(
+                            width: imgWidth,
+                            child: Text(
+                              '春秋季新款男装复古纯色男式衬衫休闲款',
+                              textAlign: TextAlign.left, // 该属性得设置宽度下才会生效
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 1,
+                              style: TextStyle(
+                                fontSize: 13,
+                                height: 1.6,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: imgWidth,
+                            child: Text(
+                              '¥ 39.99',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.red,
+                                fontSize: 12,
+                                height: 1.7,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ],
