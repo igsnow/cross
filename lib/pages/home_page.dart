@@ -2,6 +2,7 @@ import 'package:cross/dao/category_dao.dart';
 import 'package:cross/model/category_model.dart';
 import 'package:cross/widget/category_nav.dart';
 import 'package:cross/widget/floor_list.dart';
+import 'package:cross/widget/recommend.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
@@ -77,6 +78,10 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(2),
               child: FloorList(),
             ),
+            Padding(
+              padding: EdgeInsets.all(2),
+              child: Recommend(),
+            )
           ],
         ));
   }
