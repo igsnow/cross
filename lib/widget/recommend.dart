@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class Recommend extends StatelessWidget {
   final List<String> _list = [
-    '盗墓笔记',
-    '鬼吹灯',
-    '这个书名是凑的',
-    '藏海花',
-    '这个书名是凑的',
-    '藏海花',
-    '沙海',
-    '藏海花',
-    '这个书名是凑的',
-    '藏海花'
+    '夏季新款女装清新格子包臀A字短裙学生高腰显瘦荷叶',
+    '春秋季女士雪纺衬衫气质印花衬衣复古港味chic碎花上',
+    '帛卡琪2018新款女装黑色套装裙chic吊带裙两件套',
+    '女夏2019新款波点设计感印花拼接短袖宽松假两件打底',
+    '2019夏款女装阔腿裤女纯色棉麻大码休闲裤显瘦休闲裤',
+    '2019夏季冰丝针织开衫女士喇叭袖短款外套百搭空调衫',
+    '松紧裤八九分牛仔裤女夏宽松2019新裤子显瘦百搭薄款',
+    '阔腿裤女夏垂感七分裤高腰洋气坠感垂直宽松冰丝薄款',
+    '衬衫连衣裙春秋新款韩国chic风女装气质中长款白色',
+    '大码女装春秋新款两件套装外套显瘦连衣裙胖mm中长'
   ];
 
   List<Widget> _generateList() {
@@ -49,9 +49,6 @@ class Recommend extends StatelessWidget {
           Wrap(
             children: _generateList(),
             spacing: 5,
-//            runSpacing: 1,
-//            alignment: WrapAlignment.start,
-//            runAlignment: WrapAlignment.end,
           ),
         ],
       ),
@@ -59,7 +56,7 @@ class Recommend extends StatelessWidget {
   }
 }
 
-// 构建单个标签
+// 构建单个Widget
 class GoodsItem extends StatelessWidget {
   GoodsItem({
     Key key,
@@ -84,7 +81,7 @@ class GoodsItem extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.fromLTRB(5, 7, 5, 0),
             child: Text(
-              '春秋季新款男装复古纯色男式衬衫休闲款',
+              text,
               textAlign: TextAlign.left, // 该属性得设置宽度下才会生效
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
@@ -100,15 +97,30 @@ class GoodsItem extends StatelessWidget {
           width: imgWidth,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(5, 5, 5, 10),
-            child: Text(
-              '¥ 39.99',
-              textAlign: TextAlign.left,
-              style: TextStyle(
-                color: Colors.red,
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-                height: 1.125,
-              ),
+            child: Row(
+              children: <Widget>[
+                Text(
+                  '¥ 39.99',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    height: 1.125,
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 5),
+                  child: Text(
+                    '¥ 99.99',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.grey,
+                      decoration: TextDecoration.lineThrough,
+                    ),
+                  ),
+                )
+              ],
             ),
           ),
         ),
