@@ -20,7 +20,12 @@ class _SearchPageState extends State<SearchPage> {
             );
           }));
         },
-        child: Text('搜索'),
+        child: Text(
+          '搜索',
+          style: TextStyle(
+            fontSize: 20,
+          ),
+        ),
       ),
     ));
   }

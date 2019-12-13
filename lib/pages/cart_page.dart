@@ -10,7 +10,12 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-      child: Text('购物车'),
+      child: Text(
+        '购物车',
+        style: TextStyle(
+          fontSize: 20,
+        ),
+      ),
     ));
   }
 }

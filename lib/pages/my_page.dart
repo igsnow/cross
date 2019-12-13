@@ -10,7 +10,12 @@ class _MyPageState extends State<MyPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-      child: Text('我的'),
+      child: Text(
+        '我的',
+        style: TextStyle(
+          fontSize: 20,
+        ),
+      ),
     ));
   }
 }
