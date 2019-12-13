@@ -50,7 +50,9 @@ class CategoryNav extends StatelessWidget {
     return Expanded(
       flex: 1,
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+
+        },
         child: Column(
           children: <Widget>[
             Image.asset(model.icon, width: 32, height: 32),
