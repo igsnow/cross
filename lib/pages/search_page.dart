@@ -15,7 +15,7 @@ class _SearchPageState extends State<SearchPage> {
         onPressed: () {
           Navigator.of(context).push(new MaterialPageRoute(builder: (_) {
             return new Browser(
-//              url: "https://www.baidu.com",
+//              url: "https://www.douyu.com",
               url: "https://www.bilibili.com",
 //                  url: "http://m.vcanuby.com",
               title: "vcanbuy",
